@@ -10,7 +10,6 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
 - Docker Compose (version 2.0.0 or higher)
 - Git (version 2.39.0 or higher)
 - At least 4GB RAM
-- 20GB free disk space
 - Python 3.11 or higher
 - pip (Python package installer)
 - GitHub account with repository access
@@ -53,6 +52,7 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    ```bash
    docker-compose up -d
    ```
+![image](/assets/Screenshot%202025-03-27%20133739.png)
 
 2. Get initial admin password:
    ```bash
@@ -94,10 +94,10 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    ```bash
    # Install Docker
    docker-compose exec jenkins bash -c "apt-get update && apt-get install -y docker.io"
-   
+
    # Start Docker service
    docker-compose exec jenkins bash -c "service docker start"
-   
+
    # Verify Docker installation
    docker-compose exec jenkins docker --version
    ```
@@ -113,7 +113,7 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
       ```bash
       # Restart Jenkins container
       docker-compose restart jenkins
-      
+
       # Wait for Jenkins to start (about 30 seconds)
       # Then verify Jenkins is running
       docker-compose ps
@@ -135,17 +135,17 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    - Look for "Build Artifacts" section
    - Click on `add2vals` to download it to your local machine
 
-   Note: The executable downloaded from Jenkins will be a Linux version since Jenkins runs in a Linux container. 
+   Note: The executable downloaded from Jenkins will be a Linux version since Jenkins runs in a Linux container.
 
 2. To run the Linux executable on Windows using WSL:
    ```bash
    # Check if WSL is installed
    wsl --version
-   
+
    # If WSL is not installed, you'll get an error
    # In that case, install WSL:
    wsl --install
-   
+
    # After installation, restart your computer
    # Then open PowerShell and verify WSL is installed:
    wsl --version
@@ -153,18 +153,18 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    # To open WSL terminal, you have three options:
    # Option 1: Open PowerShell and type:
    wsl
-   
+
    # Option 2: Press Windows + R, type 'wsl' and press Enter
-   
+
    # Option 3: Click Start menu, type 'wsl' and click on 'Windows Subsystem for Linux'
-   
+
    # Navigate to your project directory in WSL
    # Note: In WSL, Windows paths are accessed through /mnt/
    cd /mnt/c/Users/asus/OneDrive/Desktop/Jenkins/dist
-   
+
    # Make the file executable
    chmod +x add2vals
-   
+
    # Run the executable
    ./add2vals 5 3
    ```
@@ -214,7 +214,7 @@ This project demonstrates a complete CI/CD pipeline setup using Jenkins, Docker,
    - Runs tests
    - Creates a standalone executable
 3. Generated a distributable application that can run on any system
- 
+
 ### Thank You
 Thank you for following this tutorial! We hope it has helped you understand:
 - How to set up a CI/CD pipeline with Jenkins
@@ -228,4 +228,5 @@ Feel free to:
 - Contribute improvements or suggestions
 - Report any issues you encounter
 
-Happy coding! 🚀
+### Author
+Raghav Agarwal
