@@ -16,6 +16,9 @@ services:
     command: --httpPort=8080
     tty: true
     stdin_open: true
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
 
   jenkins-agent:
     image: jenkins/inbound-agent:latest
@@ -29,6 +32,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: jenkins-agent -url http://jenkins:8080 jenkins-agent-secret python-agent
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
 
 volumes:
-  jenkins_home: 
+  jenkins_home:

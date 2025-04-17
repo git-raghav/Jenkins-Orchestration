@@ -1,7 +1,7 @@
 # Python Application with Jenkins CI/CD Pipeline
 
 <div align="center">
-  <img src="/assets/Jenkins.png" alt="Jenkins Logo" width="140" height="140">
+  <img src="/assets/Jenkins.png" alt="Jenkins Logo" width="auto" height="150">
 </div>
 
 ## 1. Project Overview
@@ -56,13 +56,13 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    ```bash
    docker-compose up -d
    ```
-   ![image](/assets/Screenshot%202025-03-27%20133739.png)
+![image](/assets/Screenshot%202025-03-27%20133739.png)
 
 2. Get initial admin password:
    ```bash
    docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
    ```
-   ![image](/assets/Screenshot%202025-03-27%20133816.png)
+![image](/assets/Screenshot%202025-03-27%20133816.png)
 
 3. Access Jenkins:
    - Open browser and go to `http://localhost:8080`
@@ -94,7 +94,7 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
      - Enter repository URL: `https://github.com/git-raghav/Jenkins-Orchestration.git`
      - Enter branch specifier: `*/main`
      - Click "Save"
-     ![image](/assets/Screenshot%202025-03-27%20134012.png)
+![image](/assets/Screenshot%202025-03-27%20134012.png)
 
 8. Install and Configure Docker in Jenkins Container:
    ```bash
@@ -107,15 +107,15 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    # Verify Docker installation
    docker-compose exec jenkins docker --version
    ```
-   ![image](/assets/Screenshot%202025-03-27%20133840.png)
-   ![image](/assets/Screenshot%202025-03-27%20134117.png)
-   ![image](/assets/Screenshot%202025-03-27%20134552.png)
+![image](/assets/Screenshot%202025-03-27%20133840.png)
+![image](/assets/Screenshot%202025-03-27%20134117.png)
+![image](/assets/Screenshot%202025-03-27%20134552.png)
 
 9. Install Docker Plugins:
     - Go to "Manage Jenkins" > "Manage Plugins"
     - Click "Available" tab
     - Search for and install:
-      - Docker Pipeline
+      - Docker Pipeli
       - Docker plugin
       - docker-build-step
     - Restart Jenkins after installation:
@@ -127,8 +127,8 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
       # Then verify Jenkins is running
       docker-compose ps
       ```
-      ![image](/assets/Screenshot%202025-03-27%20134552.png)
-      ![image](/assets/Screenshot%202025-03-27%20134619.png)
+![image](/assets/Screenshot%202025-03-27%20134552.png)
+![image](/assets/Screenshot%202025-03-27%20134619.png)
 
 10. Sign in to Jenkins:
     - Use the credentials you created in step 5
@@ -147,7 +147,7 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    - Click on `add2vals` to download it to your local machine
 
    Note: The executable downloaded from Jenkins will be a Linux version since Jenkins runs in a Linux container.
-   ![image](/assets/Screenshot%202025-03-27%20134905.png)
+![image](/assets/Screenshot%202025-03-27%20134905.png)
 
 2. To run the Linux executable on Windows using WSL:
    ```bash
@@ -180,7 +180,7 @@ This project demonstrates a simple Python application with a complete CI/CD pipe
    # Run the executable
    ./add2vals 5 3
    ```
-   ![image](/assets/Screenshot%202025-03-27%20140737.png)
+![image](/assets/Screenshot%202025-03-27%20140737.png)
 
 ## 6. What Does PyInstaller Do?
 
